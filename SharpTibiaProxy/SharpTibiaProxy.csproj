@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85BC846C-CEB7-4181-B410-EE8078DA8F84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpTibiaProxy</RootNamespace>
+    <AssemblyName>SharpTibiaProxy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4114.6375, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Domain\BattleList.cs" />
+    <Compile Include="Domain\CharacterLoginInfo.cs" />
+    <Compile Include="Domain\Chat.cs" />
+    <Compile Include="Domain\Client.cs" />
+    <Compile Include="Domain\ClientVersion.cs" />
+    <Compile Include="Domain\Creature.cs" />
+    <Compile Include="Domain\Direction.cs" />
+    <Compile Include="Domain\Item.cs" />
+    <Compile Include="Domain\Items.cs" />
+    <Compile Include="Domain\ItemType.cs" />
+    <Compile Include="Domain\Location.cs" />
+    <Compile Include="Domain\LoginServer.cs" />
+    <Compile Include="Domain\Map.cs" />
+    <Compile Include="Domain\Market.cs" />
+    <Compile Include="Domain\Outfit.cs" />
+    <Compile Include="Domain\MessageClasses.cs" />
+    <Compile Include="Domain\Shop.cs" />
+    <Compile Include="Domain\ShopItem.cs" />
+    <Compile Include="Domain\Skills.cs" />
+    <Compile Include="Domain\TextBoxTraceListener.cs" />
+    <Compile Include="Domain\Thing.cs" />
+    <Compile Include="Domain\Tile.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Util\Dispatcher.cs" />
+    <Compile Include="Util\DispatcherState.cs" />
+    <Compile Include="Util\MemoryAddresses.cs" />
+    <Compile Include="Util\Memory.cs" />
+    <Compile Include="Util\PriorityQueue.cs" />
+    <Compile Include="Util\Schedule.cs" />
+    <Compile Include="Util\Scheduler.cs" />
+    <Compile Include="Util\SchedulerState.cs" />
+    <Compile Include="Util\Task.cs" />
+    <Compile Include="Util\WinApi.cs" />
+    <Compile Include="Util\ClientChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\ClientChooser.designer.cs">
+      <DependentUpon>ClientChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ClientChooserBase.cs" />
+    <Compile Include="Util\ClientChooserOptions.cs" />
+    <Compile Include="Util\Misc.cs" />
+    <Compile Include="Network\Adler.cs" />
+    <Compile Include="Network\InMessage.cs" />
+    <Compile Include="Network\NetworkException.cs" />
+    <Compile Include="Network\NetworkMessage.cs" />
+    <Compile Include="Network\OutMessage.cs" />
+    <Compile Include="Network\ProtocolWorld.cs" />
+    <Compile Include="Network\Rsa.cs" />
+    <Compile Include="Network\Xtea.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Network\Proxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BouncyCastle.Crypto.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Util\ClientChooser.resx">
+      <DependentUpon>ClientChooser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
