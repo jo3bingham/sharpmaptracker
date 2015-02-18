@@ -1,0 +1,8 @@
+*.pdb
+*.cache
+*.txt
+*.otb
+*.xml
+*.exe
+*.manifest
+*.resources

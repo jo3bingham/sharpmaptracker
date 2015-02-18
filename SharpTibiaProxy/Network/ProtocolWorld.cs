@@ -130,7 +130,6 @@ namespace SharpTibiaProxy.Network
                 {
                     packetStart = message.ReadPosition;
                     byte cmd = message.ReadByte();
-                    Trace.WriteLine(cmd);
                     packets.Add(cmd);
 
                     switch (cmd)
@@ -768,14 +767,12 @@ namespace SharpTibiaProxy.Network
         private void ParseServerTextMessage(InMessage message)
         {
             var mClass = (MessageClasses)message.ReadByte();
-            Trace.Write("messageClass: " + mClass);
 
             switch (mClass)
             {
                 case MessageClasses.CHANNEL_MANAGEMENT:
                     {
                         var channelId = message.ReadUShort();
-                        Trace.Write(" channelId: " + channelId);
                         break;
                     }
                 case MessageClasses.EVENT_GUILD:
@@ -783,7 +780,6 @@ namespace SharpTibiaProxy.Network
                 case MessageClasses.PARTY:
                     {
                         var channelId = message.ReadUShort();
-                        Trace.Write(" channelId: " + channelId);
                         break;
                     }
                 case MessageClasses.DAMAGE_DEALT:
@@ -816,7 +812,6 @@ namespace SharpTibiaProxy.Network
             }
 
             var text = message.ReadString();
-            Trace.Write(" message: " + text + "\n");
         }
 
         private void ParseServerClosePrivateChannel(InMessage message)
@@ -837,7 +832,6 @@ namespace SharpTibiaProxy.Network
             for (int i = 0; i < playersInvited; i++)
                 message.ReadString();
 
-            Trace.WriteLine("channelId: " + channelId + " channelname: " + name + " playersJoined: " + playersJoined + " playersInvited: " + playersInvited);
         }
 
         //private void ParseServerRuleViolationB1(InMessage message)
@@ -877,7 +871,6 @@ namespace SharpTibiaProxy.Network
             for (int i = 0; i < num; i++)
                 message.ReadString();
 
-            Trace.WriteLine("channelname: " + name + " channelid: " + channelId);
         }
 
         private void ParseServerChannelList(InMessage message)
