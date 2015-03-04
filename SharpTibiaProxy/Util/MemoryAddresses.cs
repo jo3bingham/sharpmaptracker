@@ -549,6 +549,27 @@ namespace SharpTibiaProxy.Util
 
                 ClientBattleListStart = client.BaseAddress + 0x62B7D0;
             }
+            else if (client.Version == ClientVersion.Version1076)
+            {
+                ClientRsa = client.BaseAddress + 0x3899A0;
+                ClientServerStart = client.BaseAddress + 0x48F5E0;
+                ClientServerEnd = client.BaseAddress + 0x48F5E4;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x5D2424;
+                ClientMultiClient = client.BaseAddress + 0x158587;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x5D5030;
+                PlayerGoY = client.BaseAddress + 0x5D5028;
+                PlayerGoZ = client.BaseAddress + 0x5D5004;
+
+                ClientBattleListStart = client.BaseAddress + 0x62C0D0;
+            }
             else
             {
                 throw new Exception("The client version " + client.Version + " is not supported.");
