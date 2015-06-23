@@ -6,3 +6,6 @@
 *.exe
 *.manifest
 *.resources
+*.suo
+release/
+debug/
