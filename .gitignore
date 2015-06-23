@@ -6,3 +6,7 @@
 *.exe
 *.manifest
 *.resources
+*.suo
+release/
+debug/
+SharpTibiaProxy.v12.suo
