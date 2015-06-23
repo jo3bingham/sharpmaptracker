@@ -405,6 +405,9 @@ namespace SharpTibiaProxy.Network
                         case 0xF3:
                             ParseServerChannelEvent(message);
                             break;
+                        case 0xF5:
+                            ParseServerPlayerInventory(message);
+                            break;
                         case 0xF6:
                             ParseServerMarketEnter(message);
                             break;
@@ -435,6 +438,18 @@ namespace SharpTibiaProxy.Network
             var loc2 = message.ReadByte();
             var loc3 = message.ReadUInt();
             return (loc3 - int.MaxValue) / Math.Pow(10, loc2);
+        }
+
+        private void ParseServerPlayerInventory(InMessage message)
+        {
+            var count = message.ReadUShort();
+            while (count > 0)
+            {
+                message.ReadUShort();
+                message.ReadByte();
+                message.ReadUShort();
+                count--;
+            }
         }
 
         private void ParseServerEditGuildMessage(InMessage message)

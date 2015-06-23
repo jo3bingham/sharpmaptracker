@@ -86,7 +86,7 @@ namespace SharpMapTracker
                         else if (minorVersion == 24)
                             client.Version = ClientVersion.Version1041;
                         else if (minorVersion == 30)
-                            client.Version = ClientVersion.Version1071;
+                            client.Version = ClientVersion.Version1079;
 
                         if(majorVersion != currentMajorVersion)
                         {
