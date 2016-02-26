@@ -92,7 +92,8 @@ namespace SharpTibiaProxy.Util
                 }
                 else
                 {
-                    newClientChooser.Height = 54;
+                    //newClientChooser.Height = 54;
+                    newClientChooser.uxUseOT.Enabled = false;
                 }
 
                 newClientChooser.options = options;

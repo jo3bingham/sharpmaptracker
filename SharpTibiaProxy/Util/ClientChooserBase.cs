@@ -57,7 +57,7 @@ namespace SharpTibiaProxy.Util
                             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(dialog.FileName);
                             if (fvi.ProductName.Equals("Tibia Player"))
                             {
-                                client = Client.Open(dialog.FileName, options.Arguments);
+                                client = Client.OpenMC(dialog.FileName, options.Arguments);
                                 if (options.SaveClientPath == true)
                                 {
                                     ClientChooserBase.SaveClientPath(

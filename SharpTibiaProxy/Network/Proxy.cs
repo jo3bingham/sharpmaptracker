@@ -405,10 +405,31 @@ namespace SharpTibiaProxy.Network
                                 charList[j].WorldIPString = worldList[WorldID].Hostname;
                             }
 
+                            /**
+                             * Not very accurately named variables, but I'll settle for some pseudocode in case of futher implementations
+                             * 
+                             * if version < 10.80:
+                             *      ushort PremiumTime
+                             * else if version < 10.82
+                             *      bool isPremium
+                             *      uint PremiumTime (In seconds from epoch - don't quote me on this :D)
+                             * else if version >= 10.82
+                             *      byte AccountStatus (0 = normal, 1 = frozen, 2 = suspended)
+                             *      bool isPremium
+                             *      uint PremiumTime
+                             */
+
                             ushort PremiumTime = serverInMessage.ReadUShort();
                             clientOutMessage.WriteUShort(PremiumTime);
 
+                            if (client.Version.Number >= ClientVersion.Version1090.Number) // From 10.80 - but haven't added 10.80 support.
+                            {
+                                uint PremiumSeconds = serverInMessage.ReadUInt(); // Not sure about this name.
+                                clientOutMessage.WriteUInt(PremiumSeconds);
+                            }
+
                             clientOutMessage.Size = clientOutMessage.WritePosition;
+
                         }
 						break;
 					default:

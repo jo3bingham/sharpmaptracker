@@ -591,6 +591,48 @@ namespace SharpTibiaProxy.Util
 
                 ClientBattleListStart = client.BaseAddress + 0x62BF90;
             }
+            else if (client.Version == ClientVersion.Version1090)
+            {
+                ClientRsa = client.BaseAddress + 0x45EA30;
+                ClientServerStart = client.BaseAddress + 0x58C098;
+                ClientServerEnd = client.BaseAddress + 0x58C09C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6CEF10;
+                ClientMultiClient = client.BaseAddress + 0x1AACB7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D2028;
+                PlayerGoY = client.BaseAddress + 0x6D2020;
+                PlayerGoZ = client.BaseAddress + 0x6D2034;
+
+                ClientBattleListStart = client.BaseAddress + 0x72DE50;
+            }
+            else if (client.Version == ClientVersion.Version1091)
+            {
+                ClientRsa = client.BaseAddress + 0x45EA30;
+                ClientServerStart = client.BaseAddress + 0x58C098;
+                ClientServerEnd = client.BaseAddress + 0x58C09C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6CEF10;
+                ClientMultiClient = client.BaseAddress + 0x1AACB7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D2028;
+                PlayerGoY = client.BaseAddress + 0x6D2020;
+                PlayerGoZ = client.BaseAddress + 0x6D2034;
+
+                ClientBattleListStart = client.BaseAddress + 0x72DE50;
+            }
             else
             {
                 throw new Exception("The client version " + client.Version + " is not supported.");

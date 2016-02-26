@@ -523,6 +523,15 @@ namespace SharpTibiaProxy.Network
 
             if (client.Version.Number >= ClientVersion.Version1059.Number)
                 client.ExpertModeButtonEnabled = message.ReadByte().Equals(0x1);
+
+            if (client.Version.Number >= ClientVersion.Version1090.Number) // From 10.80 at least
+            {
+                var StoreImage = message.ReadString();
+                var IncCoinsTransferShop = message.ReadByte();
+
+                // Not sure what this extra byte is. Maybe the above var is a ushort?
+                var extra = message.ReadByte();
+            }
         }
 
         private void ParseServerChannelEvent(InMessage message)
