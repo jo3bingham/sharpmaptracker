@@ -127,7 +127,6 @@ namespace SharpTibiaProxy.Util
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose a Client";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.ClientChooser_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
