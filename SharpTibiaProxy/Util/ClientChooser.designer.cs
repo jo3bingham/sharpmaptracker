@@ -77,6 +77,7 @@ namespace SharpTibiaProxy.Util
             this.groupBox1.Size = new System.Drawing.Size(418, 75);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
             // 
             // uxLoginServer
             // 
@@ -86,6 +87,7 @@ namespace SharpTibiaProxy.Util
             this.uxLoginServer.Name = "uxLoginServer";
             this.uxLoginServer.Size = new System.Drawing.Size(302, 28);
             this.uxLoginServer.TabIndex = 5;
+            this.uxLoginServer.Visible = false;
             // 
             // uxLoginServerLabel
             // 
@@ -97,6 +99,7 @@ namespace SharpTibiaProxy.Util
             this.uxLoginServerLabel.Size = new System.Drawing.Size(88, 20);
             this.uxLoginServerLabel.TabIndex = 4;
             this.uxLoginServerLabel.Text = "Server:Port";
+            this.uxLoginServerLabel.Visible = false;
             // 
             // uxUseOT
             // 
@@ -108,6 +111,7 @@ namespace SharpTibiaProxy.Util
             this.uxUseOT.TabIndex = 2;
             this.uxUseOT.Text = "Use an Open Tibia Server";
             this.uxUseOT.UseVisualStyleBackColor = true;
+            this.uxUseOT.Visible = false;
             this.uxUseOT.CheckedChanged += new System.EventHandler(this.uxUseOT_CheckedChanged);
             // 
             // ClientChooser
@@ -115,7 +119,7 @@ namespace SharpTibiaProxy.Util
             this.AcceptButton = this.uxChoose;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 131);
+            this.ClientSize = new System.Drawing.Size(430, 49);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.uxChoose);
             this.Controls.Add(this.uxClients);
