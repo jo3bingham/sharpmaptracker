@@ -591,6 +591,153 @@ namespace SharpTibiaProxy.Util
 
                 ClientBattleListStart = client.BaseAddress + 0x62BF90;
             }
+            else if (client.Version == ClientVersion.Version1090)
+            {
+                ClientRsa = client.BaseAddress + 0x45EA30;
+                ClientServerStart = client.BaseAddress + 0x58C098;
+                ClientServerEnd = client.BaseAddress + 0x58C09C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6CEF10;
+                ClientMultiClient = client.BaseAddress + 0x1AACB7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D2028;
+                PlayerGoY = client.BaseAddress + 0x6D2020;
+                PlayerGoZ = client.BaseAddress + 0x6D2034;
+
+                ClientBattleListStart = client.BaseAddress + 0x72DE50;
+            }
+            else if (client.Version == ClientVersion.Version1091)
+            {
+                ClientRsa = client.BaseAddress + 0x45EA30;
+                ClientServerStart = client.BaseAddress + 0x58C098;
+                ClientServerEnd = client.BaseAddress + 0x58C09C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6CEF10;
+                ClientMultiClient = client.BaseAddress + 0x1AACB7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D2028;
+                PlayerGoY = client.BaseAddress + 0x6D2020;
+                PlayerGoZ = client.BaseAddress + 0x6D2034;
+
+                ClientBattleListStart = client.BaseAddress + 0x72DE50;
+            }
+            else if (client.Version == ClientVersion.Version1092)
+            {
+                ClientRsa = client.BaseAddress + 0x45FA30;
+                ClientServerStart = client.BaseAddress + 0x58D0F4;
+                ClientServerEnd = client.BaseAddress + 0x58D0F8;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6CFF88;
+                ClientMultiClient = client.BaseAddress + 0x1AC0C7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D3030;
+                PlayerGoY = client.BaseAddress + 0x6D3028;
+                PlayerGoZ = client.BaseAddress + 0x6D3004;
+
+                ClientBattleListStart = client.BaseAddress + 0x72F240;
+            }
+            else if (client.Version == ClientVersion.Version1094)
+            {
+                ClientRsa = client.BaseAddress + 0x464A30;
+                ClientServerStart = client.BaseAddress + 0x5931D0;
+                ClientServerEnd = client.BaseAddress + 0x5931D4;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6D6068;
+                ClientMultiClient = client.BaseAddress + 0x1AFDF7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D904C;
+                PlayerGoY = client.BaseAddress + 0x6D9044;
+                PlayerGoZ = client.BaseAddress + 0x6D9008;
+
+                ClientBattleListStart = client.BaseAddress + 0x735400;
+            }
+            else if (client.Version == ClientVersion.Version1095)
+            {
+                ClientRsa = client.BaseAddress + 0x464A30;
+                ClientServerStart = client.BaseAddress + 0x5931D0;
+                ClientServerEnd = client.BaseAddress + 0x5931D4;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6D6068;
+                ClientMultiClient = client.BaseAddress + 0x1AF8F7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6D904C;
+                PlayerGoY = client.BaseAddress + 0x6D9044;
+                PlayerGoZ = client.BaseAddress + 0x6D9008;
+
+                ClientBattleListStart = client.BaseAddress + 0x7352F0;
+            }
+            else if (client.Version == ClientVersion.Version1097)
+            {
+                ClientRsa = client.BaseAddress + 0x465A00;
+                ClientServerStart = client.BaseAddress + 0x594228;
+                ClientServerEnd = client.BaseAddress + 0x59422C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6D70E8;
+                ClientMultiClient = client.BaseAddress + 0x1B1327;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6DA04C;
+                PlayerGoY = client.BaseAddress + 0x6DA044;
+                PlayerGoZ = client.BaseAddress + 0x6DA008;
+
+                ClientBattleListStart = client.BaseAddress + 0x734A60;
+            }
+            else if (client.Version == ClientVersion.Version1098)
+            {
+                ClientRsa = client.BaseAddress + 0x46BAA0;
+                ClientServerStart = client.BaseAddress + 0x59CA88;
+                ClientServerEnd = client.BaseAddress + 0x59CA8C;
+                ClientServerStep = 0x30;
+                ClientServerDistanceHostname = 0x04;
+                ClientServerDistanceIP = 0x1C;
+                ClientServerDistancePort = 0x28;
+                ClientServerMax = 10;
+                ClientSelectedCharacter = client.BaseAddress + 0x6DF978;
+                ClientMultiClient = client.BaseAddress + 0x1B1AA7;
+
+                ClientStatus = client.BaseAddress + 0x31CA38;//?
+
+                PlayerGoX = client.BaseAddress + 0x6E204C;
+                PlayerGoY = client.BaseAddress + 0x6E2044;
+                PlayerGoZ = client.BaseAddress + 0x6E2008;
+
+                ClientBattleListStart = client.BaseAddress + 0x73CFA0;
+            }
             else
             {
                 throw new Exception("The client version " + client.Version + " is not supported.");

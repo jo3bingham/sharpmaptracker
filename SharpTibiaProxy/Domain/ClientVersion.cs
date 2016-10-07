@@ -39,7 +39,14 @@ namespace SharpTibiaProxy.Domain
         public static readonly ClientVersion Version1075 = new ClientVersion { Number = 1075, FileVersion = "10.7.5.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 55 };
         public static readonly ClientVersion Version1076 = new ClientVersion { Number = 1076, FileVersion = "10.7.6.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 55 };
         public static readonly ClientVersion Version1079 = new ClientVersion { Number = 1079, FileVersion = "10.7.9.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
-        public static readonly ClientVersion Current = Version1079;
+        public static readonly ClientVersion Version1090 = new ClientVersion { Number = 1090, FileVersion = "10.9.0.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1091 = new ClientVersion { Number = 1091, FileVersion = "10.9.1.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1092 = new ClientVersion { Number = 1092, FileVersion = "10.9.2.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1094 = new ClientVersion { Number = 1094, FileVersion = "10.9.4.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1095 = new ClientVersion { Number = 1095, FileVersion = "10.9.5.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1097 = new ClientVersion { Number = 1097, FileVersion = "10.9.7.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Version1098 = new ClientVersion { Number = 1098, FileVersion = "10.9.8.0", OtbmVersion = 2, OtbMajorVersion = 3, OtbMinorVersion = 56 };
+        public static readonly ClientVersion Current = Version1098;
 
         public int Number { get; private set; }
         public string FileVersion { get; private set; }
@@ -85,6 +92,13 @@ namespace SharpTibiaProxy.Domain
                 case "10.7.5.0": return Version1075;
                 case "10.7.6.0": return Version1076;
                 case "10.7.9.0": return Version1079;
+                case "10.9.0.0": return Version1090;
+                case "10.9.1.0": return Version1091;
+                case "10.9.2.0": return Version1092;
+                case "10.9.4.0": return Version1094;
+                case "10.9.5.0": return Version1095;
+                case "10.9.7.0": return Version1097;
+                case "10.9.8.0": return Version1098;
                 default: return null;
             }
         }

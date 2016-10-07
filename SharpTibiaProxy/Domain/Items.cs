@@ -191,6 +191,10 @@ namespace SharpTibiaProxy.Domain
                                 case 0x23: //default action
                                     reader.ReadUInt16();
                                     break;
+                                case 0x24: // New in 10.92, unknown
+                                    break;
+                                case 0x25: // New in 10.92, unknown
+                                    break;
                                 case 0xFE: //is usable
                                     break;
                                 case 0xFF: //end of attributes

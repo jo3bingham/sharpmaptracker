@@ -5,7 +5,7 @@ namespace SharpMapTracker
 {
     public class Constants
     {
-        public const string MAP_TRACKER_VERSION = "0.8.21";
+        public const string MAP_TRACKER_VERSION = "0.8.27";
 
         public const string MAP_SHARE_HOST = "brunodunbar.no-ip.info";
         public const int MAP_SHARE_PORT = 41567;

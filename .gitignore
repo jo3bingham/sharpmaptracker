@@ -9,3 +9,4 @@
 *.suo
 release/
 debug/
+tests/
